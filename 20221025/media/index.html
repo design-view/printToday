@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       * { margin:0; padding: 0; box-sizing: border-box;}
+       a { text-decoration: none; color: inherit; }
+       li { list-style: none; }
+       body {
+           padding: 16px;
+       }
+       body > div {
+           border: 1px solid #ccc;
+           padding: 16px;
+       }
+       header {
+           text-align: center;
+           padding-bottom: 20px;
+       }
+       header div {
+           text-align: left;
+       }
+       header + div ul {
+           display: flex;
+           flex-wrap: wrap;
+       }
+       header + div ul li {
+           width: 100%;
+           padding-bottom: 20px;
+       }
+       header + div ul li img {
+           width: 100%;
+       }
+       header + div ul li h3 {
+           border-top: 1px dotted rgb(161, 131, 22);
+           border-bottom: 1px dotted rgb(161, 131, 22);
+           line-height: 60px;
+           background: rgb(248, 243, 199);
+           text-align: center;
+           margin: 16px 0;
+       }
+       footer {
+           background: #444;
+           color: #fff;
+           padding: 16px;
+           text-align: center;
+       }
+
+       /* 768이상일때 */
+       @media screen and (min-width: 768px) {
+           header { display: flex; align-items: center; }
+           header h1 { width: 40%; }
+           header > div {
+               width: 60%;
+           }
+           header img { width: 80%; }
+           header + div ul {
+               justify-content: space-between;
+           }
+           header + div ul li {
+           width: 49%;
+           padding-bottom: 20px;
+           }
+           header + div ul li:nth-child(3) {
+               display: none;
+           }
+       }
+       /* 1024이상일때 */
+       @media screen and (min-width: 1024px) {
+        header + div ul li {
+           width: 32.5%;
+        }
+        header + div ul li:nth-child(3) {
+               display: block;
+           }
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <h1><img src="IMG/diy_logo.jpg"></h1>
+            <div>
+                <h2>다이정글은 업계선두주자로 오랜 실무 경험과 축적된 전문지식을 자랑하는 DIY 가구 전문 쇼핑몰입니다.</h2>
+                <p>DIY와 리폼에 대해 생소한 소비자에게 리폼을 알리고 장려하며 초보자도 쉽게 도전할 수 있도록 다양한 콘텐츠와 소비자 중심의 쇼핑몰로 거듭나기 위해 노력하고 있습니다. 즐거운 DIY와 리폼, 다이정글과 함께 시작하세요!</p>
+            </div>
+        </header>
+        <div>
+            <ul>
+                <li>
+                    <img src="IMG/diy_item01.jpg" alt="">
+                    <h3>내츄럴 수저꽂이</h3>
+                    <p>내추럴 수저꽃이 입니다. 군더더기 없는 깔끔한 박스 디자인에 앞면 아크릴에 귀여운 수저 그림이 그려져 있어요. 원목나무의 내추럴함을 느낄 수 있는 수저꽃이 입니다.</p>
+                </li>
+                <li>
+                    <img src="IMG/diy_item02.jpg" alt="">
+                    <h3>우드 사각 컵받침</h3>
+                    <p>내추럴 수저꽃이 입니다. 군더더기 없는 깔끔한 박스 디자인에 앞면 아크릴에 귀여운 수저 그림이 그려져 있어요. 원목나무의 내추럴함을 느낄 수 있는 수저꽃이 입니다.</p>
+                </li>
+                <li>
+                    <img src="IMG/diy_item03.jpg" alt="">
+                    <h3>정글 삼나무 서류 보관함</h3>
+                    <p>내추럴 수저꽃이 입니다. 군더더기 없는 깔끔한 박스 디자인에 앞면 아크릴에 귀여운 수저 그림이 그려져 있어요. 원목나무의 내추럴함을 느낄 수 있는 수저꽃이 입니다.</p>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            COPYRIGHT(C) 2006-2015 DIYJUNGLE. Allrights reserved DIYJUNGLE
+        </footer>
+    </div>
+</body>
+</html>

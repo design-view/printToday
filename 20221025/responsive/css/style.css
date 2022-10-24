@@ -1,0 +1,341 @@
+@charset 'utf-8';
+/* reset */
+* { margin: 0; padding: 0; box-sizing: border-box; 
+    vertical-align: baseline;
+}
+a { text-decoration: none; color: inherit; }
+li { list-style: none;}
+img { border: 0; }
+/* reset /*/
+:root {
+    --color1 :#2ecc71;
+    --color2 : #e65d5d;
+    --color3 : #219af7;
+    --color4 : #ffc40f;
+    --color5 : #a660c2;
+    --color6: #e6567a;
+}
+
+
+
+body {
+    background-image: url('../images/body_bg.png');
+}
+#wrap {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    background-color: khaki;
+}
+header {
+    height: 80px;
+    background-color: var(--color1);
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+}
+header h1 {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 15%;
+    height: 140px;
+    background-color: var(--color1);
+    text-align: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+header > div {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.toggle {
+    display: none;
+}
+header ul {
+    display: flex;
+}
+header ul:nth-child(1) li {
+    padding :0 20px;
+}
+header ul:nth-child(2) li {
+    padding :0 10px;
+}
+#contents {
+    display: flex;
+    flex-wrap: wrap;
+}
+.slider_section {
+    width: 50%;
+    background: url(../images/slider_01.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.slider_section a {
+    display: block;
+    width: 34px;
+    height: 39px;
+    background-image: url('../images/slider_arrow.png');
+    font-size: 0;
+    position: absolute;
+    top: calc(50% - 15px);
+}
+.prev {
+    left:-10px;
+    background-position: left top;
+}
+.next {
+    right: -10px;
+    background-position: right top;
+}
+.post_section {
+    width: 30%;
+    background: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.post_section ul {
+    width: 70%;
+    text-align:center;
+    color: #fff;
+}
+.post_section ul img {
+    width: 100%;
+}
+.post_section ul li {
+    padding-bottom: 20px;
+}
+.rankup_section {
+    width: 20%;
+    background: var(--color3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.rankup_section h3 {
+    padding-bottom: 20px;
+}
+.latest_section {
+    width: 30%;
+    background: var(--color4);
+    height: 300px;
+    color: #fff;
+    padding: 40px;
+}
+.latest_section h3, .popular_section h3 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.popular_section {
+    width: 30%;
+    background: var(--color5);
+    color: #fff;
+    padding: 40px;
+}
+.banner_section div {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_section div:nth-child(2) {
+    background-color: rgba(0,0,0,0.3);
+}
+.banner_section div:nth-child(2) ul {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+.banner_section div:nth-child(2) ul li {
+    width :30%;
+}
+.banner_section div:nth-child(2) ul li img {
+    width :80%;
+}
+.banner_section {
+    width: 25%;
+    background: var(--color6);
+}
+.social_section {
+    width: 15%;
+    background: lightsteelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+}
+/* 950px 이하일때 */
+@media screen and (max-width: 950px) {
+    header {
+        height: 140px;
+    }
+    header > div {
+        width : 100%;
+        align-items: flex-start;
+        padding: 0;
+        
+    }
+    .toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(0,0,0,0.7);
+        right: 30px;
+        top: 70px;
+    }
+    .toggle span {
+        width: 60%;
+        height: 3px;
+        background-color: var(--color1);
+        margin: 1px;
+    }
+    header > div ul:nth-child(1) {
+        display: none;
+    }
+    header > div ul:nth-child(2) {
+        width :100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #fff;
+        height: 50px;
+    }
+    header > div ul:nth-child(2) li {
+        width: 25%;
+        text-align: center;
+    }
+    header h1 {
+        top: 50px;
+        width: 20%;
+        font-size: 24px;
+        padding-top: 40px;
+    }
+    .slider_section {
+        order: 1;
+        width: 60%;
+        background-size: cover;
+    }
+    .rankup_section {
+        order: 2;
+        width: 40%;
+        padding: 40px;
+    }
+    .rankup_section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .rankup_section ul li {
+        width: 48%;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    .latest_section {
+        order: 3;
+        width: 42.5%;
+    }
+    .popular_section {
+        order: 4;
+        width: 42.5%;
+    }
+    .social_section {
+        order: 5;
+        width: 15%;
+    }
+    .post_section  {
+        order: 6;
+        width: 70%;
+    }
+    .post_section ul {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    .post_section ul li {
+        width: 45%;
+        padding: 0;
+    }
+    .banner_section {
+        order: 7;
+        width: 30%;
+    }
+}
+/* 750px 이하일때 */
+@media screen and (max-width: 750px) {
+    header {
+        height: 200px;
+    }
+    header h1 {
+        width: 100%;
+    }
+    .toggle {
+        z-index:2;
+    }
+    #contents > section {
+        width: 100%;
+    }
+    .slider_section {
+        height: 400px;
+    }
+    .latest_section { 
+        order: 2;
+        height: 300px;
+    }
+    .popular_section {
+        order: 3;
+        height: 300px;
+    }
+    .post_section {
+        order: 4;
+    }
+    .post_section ul {
+        flex-direction: column;
+    }
+    .post_section ul li {
+        width: 100%;
+    }
+    .rankup_section {
+        order: 5;
+    }
+    .banner_section {
+        order: 6;
+        height: 300px;
+    }
+    .banner_section div:nth-child(2) ul li {
+        text-align: center;
+        padding: 20px 0;
+    }
+    .banner_section div:nth-child(2) ul li img {
+        width: 40%;
+    }
+    .social_section {
+        order: 7;
+    }
+    .social_section ul {
+        display: flex;
+        padding: 20px;
+    }
+    .social_section ul li {
+        padding: 0 20px;
+    }
+
+}
