@@ -1,0 +1,18 @@
+$main-color: tomato;
+
+.box {
+    $w: 200px !global;
+    $h: 100px;
+    .so {
+        width: $w;
+        height: $h;
+    }
+    @at-root .big {
+        width: $w;
+        height: $h;
+    }
+}
+.bgbox {
+    width: $w;
+    background: $main-color;
+}

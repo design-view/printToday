@@ -1,0 +1,62 @@
+@mixin large-text {
+    // font-size : 22px;
+    // font-family: sans-serif;
+    // font-weight: bold;
+    font : {
+        size: 22px;
+        family: sans-serif;
+        weight: bold;
+    }
+    &::after {
+        content: "여러분";
+    }
+}
+@mixin dash-line($width:1px, $color: black){
+    border: $width dashed $color;
+}
+.box {
+    @include large-text;
+}
+.list {
+    @include large-text;
+}
+.box1 {
+    @include dash-line(1px, red);
+}
+.box2 {
+    @include dash-line(5px, blue );
+}
+.box3 {
+    @include dash-line();
+}
+@mixin position($p: absolute, $t:null, $b:null, $l: null, $r: null){
+    position: $p;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
+}
+.ab_box {
+    @include position($t:30px, $r:40px);
+}
+.fixed_box {
+    @include position(fixed, $b:20px, $l:30px);
+}
+@mixin flexbox(
+    $direction: row,
+    $wrap: wrap,
+    $justify:space-between,
+    $align:center)
+    {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+.visual {
+    @include flexbox(column);
+}
+.ulstyle {
+    @include flexbox($wrap:nowrap);
+}
