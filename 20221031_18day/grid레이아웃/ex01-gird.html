@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box;}
+        #container {
+            width: 1000px;
+            height: 700px;
+            background-color: darkred;
+            display: grid;
+            grid-template-columns: repeat(3,200px);
+            grid-template-rows: 100px 200px 100px 100px;
+            grid-template-areas: 
+                "header header header"
+                "menu main main"
+                ". main main"
+                "footer footer footer"
+            ;
+            gap: 20px 30px;
+            align-content: start;
+            justify-content: start;
+
+            align-items: stretch;
+            justify-items: end;
+        }
+        #container div {
+            background-color: brown;
+            border: 2px solid red;
+        }
+        #container div:nth-child(1) {
+            grid-area: header;
+            background-color: burlywood;
+        }
+        #container div:nth-child(2) {
+            grid-area: menu;
+            background-color: cornsilk;
+        }
+        #container div:nth-child(3) {
+            grid-area: main;
+            background-color: darkorchid;
+        }
+        #container div:nth-child(4) {
+            grid-area: footer;
+            background-color: fuchsia;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>item1</div>
+        <div>item2</div>
+        <div>item3</div>
+        <div>item4</div>
+    </div>
+</body>
+</html>

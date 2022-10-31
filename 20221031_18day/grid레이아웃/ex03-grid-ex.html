@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { padding:0; margin:0; box-sizing: border-box;}
+        li { list-style: none; }
+        a { text-decoration: none; color:inherit; }
+        body { font-size: 14px; color: #4d4d4d; 
+        line-height: 1.5; }
+        #wrap {
+            width: 80%;
+            margin: 0 auto;
+        }
+        #header {
+            display: grid;
+            grid-template-columns: 10% 40%;
+            justify-content: space-between;
+            align-content: center;
+            height: 80px;
+        }
+        #header ul {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            align-content: center;
+            text-align: center;
+        }
+        #header ul li:not(:last-child) {
+            border-right: 1px solid #ccc;
+        }
+        h2 {
+            text-align: center;
+            padding: 30px 0 ;
+            border-bottom: 1px solid #333;
+            margin-bottom: 30px;
+        }
+        #main01 ul {
+            display: grid;
+            grid-template-columns: repeat(3,30%);
+            justify-content: space-between;
+            text-align: center;
+        }
+        #main01 ul li {
+            border: 1px solid #ccc;
+            padding: 30px 0;
+        }
+        #main02 li {
+            line-height: 40px;
+            border-bottom: 1px solid #ccc;
+        }
+        #footer {
+            display: grid;
+            grid-template-columns: 60% 10%;
+            justify-content: space-between;
+            align-content: center;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>Green</h1>
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="main01">
+                <h2>메인컨텐츠01</h2>
+                <ul>
+                    <li>
+                        <h3>작은제목 입니다.</h3>
+                        <p>내용적는 부분입니다.<br/>2020.12.17</p>
+                    </li>
+                    <li>
+                        <h3>작은제목 입니다.</h3>
+                        <p>내용적는 부분입니다.<br/>2020.12.17</p>
+                    </li>
+                    <li>
+                        <h3>작은제목 입니다.</h3>
+                        <p>내용적는 부분입니다.<br/>2020.12.17</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="main02">
+                <h2>공지사항</h2>
+                <ul>
+                    <li>2020 그린컴퓨터 아카데미 소식 <span>2020.12.17</span></li>
+                    <li>코로나 바이러스 예방법 <span>2020.12.17</span></li>
+                    <li>그린컴퓨터 아카데미 소식 <span>2020.12.17</span></li>
+                    <li>코로나 바이러스 예방법 <span>2020.12.17</span></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+            <p>주소 : 서울특별시 용산구 한강대로 대표이사: 그린 
+                사업자등록번호 : 110-12-12345 
+                통신판매신고 : 제 2020-서울용산-000호</p>
+            <h1>Green</h1>
+        </div>
+    </div>
+</body>
+</html>
