@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1" class="divbox">
+        박스1 입니다.
+    </div> 
+    <div id="box2" class="divbox">
+        박스2 입니다.
+    </div>
+    <script>
+        //Dom 요소 선택
+        // 1.단수 선택
+        // 01)document.getElementById('id명')
+        // 02)document.querySelector('css선택자 그대로')
+
+        // 2.복수 선택
+        // 01)document.getElementsByClassName('class명') - html컬랙션(유사배열)
+        // 02)document.getElementsByTagName('tag명') - html컬랙션(유사배열)
+        // 03)document.querySelectorAll('css선택자 그대로') - 노드리스트(유사배열)
+        console.log(document.querySelectorAll('.divbox'));
+        document.querySelectorAll('.divbox')[0].innerHTML = "안녕하세요";
+        document.querySelectorAll('.divbox')[1].innerHTML = "여러분";
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><h1>큰제목</h1></div>
+    <button onclick="chText()">클릭하세요</button>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul>
+    <button onclick="lich()">클릭하세요</button>
+    <script>
+        //함수
+        //프로그램을 구성하는 주요 구성요소. 
+        //함수를 사용하면 같은 기능을 여러번 사용할 수 있음.
+        //기능.
+        function chText(){
+            console.log(document.querySelector('div').innerHTML);
+        }
+        function lich(){
+            document.querySelectorAll('li')[0].innerHTML = "변경";
+        }
+    </script>
+</body>
+</html>

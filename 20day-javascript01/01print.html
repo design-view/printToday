@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test">
+        오늘은 월요일 입니다.
+    </div>
+    <script>
+        //자바스크립트 출력
+        //1.경고창에 출력 alert('내용')
+        alert('안녕하세요');
+        //2.콘솔에 출력 console.log('내용')
+        console.log('그린컴퓨터');
+        //3.html body에 출력하기
+        document.write('<h1>재미있는 자바스크립트</h1>');
+        document.write('<h2>화면에 출력하기</h2>')
+        //4.html DOM 요소안 내용으로 출력하기
+        document.getElementById('test').innerHTML = "내일은 화요일 입니다.";
+    </script>
+</body>
+</html>
