@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+        }
+        div {
+            width: 500px;
+            height: 400px;
+        }
+        #box1 { background-color: cornsilk;}
+        #box2 { background-color: crimson; color: #fff; }
+        #aa {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">ddddd</p>
+    <div id="box1">box1입니다.</div>
+    <div id="box2">box2입니다.</div>
+    <div id="aa"></div>
+    <script>
+        const ptext = document.querySelector('#text');
+        const box1 = document.querySelector('#box1');
+        const box2 = document.querySelector('#box2');
+        const aa = document.querySelector('#aa');
+        //이벤트 바인딩 요소.addEventListener('이벤트',함수)
+        //1.box1에 마우스를 움직이면 ptext의 글자가 마우스를 움직였습니다.
+        box1.addEventListener('mousemove',function(event){
+            aa.style.top = event.pageY+'px';
+            aa.style.left = event.pageX+'px';
+            console.log(event.pageX);
+        })
+        //2.box2에 마우스를 올리면 ptext의 글자가 마우스를 올렸습니다.
+        box2.addEventListener('mouseenter',function(){
+            ptext.innerHTML = "마우스를 올렸습니다.";
+        })
+        //3.box2에 마우스를 떼면 ptext의 글자가 마우스를 아웃했습니다.
+        box2.addEventListener('mouseleave',function(){
+            ptext.innerHTML = "마우스가 벗어났습니다.";
+        })
+        //4.box1에 클릭하면 box1 높이를 500으로 변경
+        box1.addEventListener('click',function(){
+            box1.style.height = '500px';
+        })
+    </script>
+</body>
+</html>

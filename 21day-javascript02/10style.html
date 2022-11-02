@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { width: 1000px; height: 500px; background: yellow; }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button onclick="chBackground('rgb(255,0,0)')">pink색상</button>
+    <button onclick="chBackground('rgb(0,255,0)')">red색상</button>
+    <button onclick="chBackground('rgb(0,0,255)')">blue색상</button>
+    <button onclick="chBackground('rgb(255,0,255)')">green색상</button>
+    <button onclick="bgColorView()">배경색상알기</button>
+    <script>
+        //선택한 요소의 css속성값을 반환하기
+        //1.style.속성명 (인라인 스타일로 작성된 값만 반환)
+        //2.window.getComputedStyle(선택한요소).getPropertyValue('스타일속성명')
+        //(내부 스타일 속성값을 반환)
+        //div의 배경색을 pink로 변경
+        function chBackground(bgcolor){
+            document.querySelector('div').style.background = bgcolor;
+            document.querySelector('div').innerHTML = `${bgcolor}입니다.`;
+            console.log(document.querySelector('div').style.background);
+        }
+        function bgColorView(){
+            let div = document.querySelector('div');
+            let style = window.getComputedStyle(div).getPropertyValue('background-color');
+            alert(style);
+            let a = undefined
+        }
+    </script>
+</body>
+</html>

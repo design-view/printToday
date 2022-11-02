@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin:0; padding: 0;} 
+        #back { 
+            height: 100vh;
+            background-color: gainsboro;
+            position: relative;
+        }
+        #circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: hotpink;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="back">
+        <div id="circle"></div>
+    </div>
+    <script>
+        //back위에서 마우스를 움직이면 circle마우스를 따라다니도록...
+        let back = document.querySelector('#back');
+        let circle = document.querySelector('#circle');
+        back.addEventListener('mousemove',function(event){
+            let x = event.pageX;
+            let y = event.pageY;
+            circle.style.left = x+'px';
+            circle.style.top = y+'px';
+        })
+    </script>
+</body>
+</html>

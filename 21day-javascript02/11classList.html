@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin:0; padding:0; box-sizing: border-box;}
+        #header {
+            background-color: #eee;
+            height: 80px;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+        #header.on {
+            height: 180px;
+        }
+        ul {
+            display: flex;
+        }
+        li {
+            padding: 20px;
+            line-height: 40px;
+        }
+        #submenuBg {
+            height: 100px;
+            background: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <ul>
+            <li onmouseenter="addOn()" onmouseleave="removeOn()">list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+        </ul>
+        <div id="submenuBg"></div>
+    </div>
+    <script>
+        //li에 마우스를 올리면 header라는id를 가진 요소의 클래스 on을 지정
+        function addOn(){
+            document.querySelector('#header').classList.add('on');
+        }
+        function removeOn(){
+            document.querySelector('#header').classList.remove('on');
+        }
+    </script>
+</body>
+</html>
